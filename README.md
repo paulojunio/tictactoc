@@ -1,3 +1,7 @@
+## Tutorial React
+Aplicativo sobre o jogo da velha conhecido como Tic-Tac-Toe.
+O algoritmo foi feito baseado no tutorial do [React](https://reactjs.org/tutorial/tutorial.html)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

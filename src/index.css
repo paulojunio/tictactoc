@@ -1,11 +1,13 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
+  background-color: #f1f1f1;
 }
 
 ol, ul {
   padding-left: 30px;
 }
+
 
 .board-row:after {
   clear: both;
@@ -17,19 +19,21 @@ ol, ul {
   margin-bottom: 10px;
 }
 
+
 .square {
   background: #fff;
-  border: 1px solid #999;
+  color: #999;
+  border: 2px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 48px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  line-height: 60px;
+  height: 60px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 60px;
 }
 
 .square:focus {
@@ -42,10 +46,51 @@ ol, ul {
 
 .game {
   display: flex;
-  flex-direction: row;
+  background-color: #29c457;
+  border-top:3px solid #999;
+  border-bottom: 3px solid #999; 
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 3px;
+  width: 600px;
 }
 
+.game-desc h1{
+    text-align: center;
+    font-size: 30;
+    color: white;
+}
+
+.game-board {
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
 .game-info {
-  margin-left: 20px;
+  margin: 0 auto;
+}
+.game-info #status {
+  font-size: 34px;
+  padding-left: 10px;
+  text-align: center;
+  margin: 0 auto !important;
+  color: white;
+  
+}
+
+.game-info li{
+  font-size: 30px;
+  padding-bottom: 10px;
+  color: white;
+}
+#passos{
+
+  display: block !important;
+  color: #29c457;
+  font-size: 25px !important;
+  border: 2px solid #999;
+  background-color: white;
+  width: 300px;
+  border-radius: 2px;
+  text-align: center;
 }
 

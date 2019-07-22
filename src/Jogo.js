@@ -46,10 +46,10 @@ class Jogo extends React.Component {
       const ganhador = declarandoVencedor(estadoAtual.campos);
 
       const movimentos = historico.map((passo, movimento) => {
-        const desc = movimento ? "Go to move #" + movimento:
-        "Go to game start";
+        const desc = movimento ? "Ir para jogada #" + movimento:
+        "Ir para o começo do jogo";
         
-        return ( <li key={movimento}> <button onClick={() => this.pulePara(movimento)}>{desc}</button></li>)
+        return ( <li key={movimento}> <button id="passos" onClick={() => this.pulePara(movimento)}>{desc}</button></li>)
       })
       let status;
       if(ganhador) {
@@ -59,11 +59,14 @@ class Jogo extends React.Component {
         if(velha) {
             status = "Que pena, deu velha!"
         }else{
-            status = 'Próximo a jogar: ' + (this.state.proximoX ? 'X' : 'O');
+            status = 'Próximo a jogar : ' + (this.state.proximoX ? 'X' : 'O');
         }
       }
       return (
         <div className="game">
+          <div className="game-desc">
+            <h1>Jogo da Velha feito usando React</h1>
+          </div>
           <div className="game-board">
             <Tabuleiro 
             campos = {estadoAtual.campos}
@@ -71,7 +74,7 @@ class Jogo extends React.Component {
             />
           </div>
           <div className="game-info">
-            <div>{status}</div>  
+            <div id="status">{status}</div>  
             <ol>{movimentos}</ol>
           </div>
         </div>
@@ -105,4 +108,8 @@ function declarandoVencedor(campos) {
   }
   return null;
 }
+
+/**
+ * 
+ */
 export default Jogo;

@@ -1,12 +1,10 @@
 import React from 'react';
 
-class Campo extends React.Component {
-    render() {
-      return (
-        <button className="square">
-          {/* TODO */}
-        </button>
-      );
-    }
+function Campo(props) {
+    return (
+      <button className="square" onClick={props.onClick}>
+        {props.valor}
+      </button>
+    );
   }
 export default Campo;
